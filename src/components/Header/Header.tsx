@@ -9,64 +9,64 @@ import { FiShoppingCart } from "react-icons/fi";
 const Header = () => {
   return (
     <>
-      <header className=" bg-black text-white flex w-full justify-between items-centerx py-2 px-4 h-14 lg:h-16 md:px-10 gap-4">
+      <header className=" flex h-14 w-full items-center justify-between gap-4 bg-black px-4 py-2 text-white md:px-10 lg:h-16">
         <div className="flex items-center">
           <button className="lg:hidden">
-            <GiHamburgerMenu className="text-white bg-black text-xl md:text-2xl" />
+            <GiHamburgerMenu className="bg-black text-xl text-white md:text-2xl" />
           </button>
           <Link href="/" className="flex">
             <Image
               src="/images/godaddy-logo.png"
               alt="Godaddy Logo"
-              className="w-auto h-full pl-4"
-              width={30}
+              className="pl-4"
+              width={50}
               height={30}
             />
-            <span className="text-xl font-bold pl-2 hidden md:block text-[#1bdadb]">
+            <span className="hidden pl-2 text-xl font-bold text-[#1bdadb] md:block">
               GoDaddy
             </span>
           </Link>
         </div>
-        <div className="lg:flex md:hidden items-center justify-between w-[60%] font-bold text-lg hidden">
-          <Link href="#" className="p-2 rounded-lg hover:bg-gray-500">
+        <div className="hidden w-[60%] items-center justify-between text-lg font-bold md:hidden lg:flex">
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
             Domains
           </Link>
-          <Link href="#" className="p-2 rounded-lg hover:bg-gray-500">
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
             Websites and Hosting
           </Link>
-          <Link href="#" className="p-2 rounded-lg hover:bg-gray-500">
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
             Security
           </Link>
-          <Link href="#" className="p-2 rounded-lg hover:bg-gray-500">
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
             Email and Marketing
           </Link>
-          <Link href="#" className="p-2 rounded-lg hover:bg-gray-500">
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
             Pricing
           </Link>
         </div>
-        <div className="lg:flex md:hidden items-center justify-between w-[25%] text-sm hidden">
-          <Link href="#" className="p-2 rounded-lg hover:bg-gray-500">
+        <div className="hidden w-[25%] items-center justify-between text-sm md:hidden lg:flex">
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
             040-67607600
           </Link>
-          <Link href="#" className="p-2 rounded-lg hover:bg-gray-500">
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
             Help
           </Link>
-          <Link href="#" className="p-2 rounded-lg hover:bg-gray-500">
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
             Sign In
           </Link>
         </div>
-        <div className="flex items-center w-[40%] md:w-[15%] justify-between lg:w-fit">
+        <div className="flex w-[40%] items-center justify-between md:w-[15%] lg:w-fit">
           <Link href="#">
-            <IoCallOutline className="text-white bg-black text-xl lg:hidden" />
+            <IoCallOutline className="bg-black text-xl text-white lg:hidden" />
           </Link>
           <Link href="#">
-            <MdHelpOutline className="text-white bg-black text-xl lg:hidden" />
+            <MdHelpOutline className="bg-black text-xl text-white lg:hidden" />
           </Link>
           <Link href="#">
-            <GoPerson className="text-white bg-black text-xl lg:hidden" />
+            <GoPerson className="bg-black text-xl text-white lg:hidden" />
           </Link>
           <Link href="#">
-            <FiShoppingCart className="text-white bg-black text-xl" />
+            <FiShoppingCart className="bg-black text-xl text-white" />
           </Link>
         </div>
       </header>
