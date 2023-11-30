@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-image-landscape': "url('/images/mrq-in-hp-landscape.jpg')",
-        'hero-image-portrait': "url('/images/mrq-in-hp-portrait.jpg')",
+        'hero-image-landscape': "url('/Images/mrq-in-hp-landscape.jpg')",
+        'hero-image-portrait': "url('/Images/mrq-in-hp-portrait.jpg')",
       },
     },
   },

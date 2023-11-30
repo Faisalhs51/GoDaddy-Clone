@@ -16,7 +16,7 @@ const Header = () => {
           </button>
           <Link href="/" className="flex">
             <Image
-              src="/images/godaddy-logo.png"
+              src="/Images/godaddy-logo.png"
               alt="Godaddy Logo"
               className="pl-4"
               width={50}
