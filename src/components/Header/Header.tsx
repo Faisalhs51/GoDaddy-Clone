@@ -9,10 +9,10 @@ import { FiShoppingCart } from "react-icons/fi";
 const Header = () => {
   return (
     <>
-      <header className=" flex h-14 w-full items-center justify-between gap-4 bg-black px-4 py-2 text-white md:px-10 lg:h-16">
+      <header className=" flex h-14 w-full items-center justify-between gap-4 bg-[#2B2B2B] px-4 py-2 text-white md:px-10 lg:h-16">
         <div className="flex items-center">
           <button className="lg:hidden">
-            <GiHamburgerMenu className="bg-black text-xl text-white md:text-2xl" />
+            <GiHamburgerMenu className="bg-[#2B2B2B] text-xl text-white md:text-2xl" />
           </button>
           <Link href="/" className="flex">
             <Image
@@ -57,16 +57,16 @@ const Header = () => {
         </div>
         <div className="flex w-[40%] items-center justify-between md:w-[15%] lg:w-fit">
           <Link href="#">
-            <IoCallOutline className="bg-black text-xl text-white lg:hidden" />
+            <IoCallOutline className="bg-[#2B2B2B] text-xl text-white lg:hidden" />
           </Link>
           <Link href="#">
-            <MdHelpOutline className="bg-black text-xl text-white lg:hidden" />
+            <MdHelpOutline className="bg-[#2B2B2B] text-xl text-white lg:hidden" />
           </Link>
           <Link href="#">
-            <GoPerson className="bg-black text-xl text-white lg:hidden" />
+            <GoPerson className="bg-[#2B2B2B] text-xl text-white lg:hidden" />
           </Link>
           <Link href="#">
-            <FiShoppingCart className="bg-black text-xl text-white" />
+            <FiShoppingCart className="bg-[#2B2B2B] text-xl text-white" />
           </Link>
         </div>
       </header>
