@@ -3,8 +3,8 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 const Services = () => {
   return (
     <section>
-      <div className="h-fit w-full ">
-        <div className=" grid h-full grid-cols-2 p-4 text-center md:grid-cols-5 md:grid-rows-2">
+      <div className="h-fit w-full">
+        <div className=" grid h-full grid-cols-2 p-4 md:p-8 lg:px-14 text-center md:grid-cols-5 md:grid-rows-2 mb-10">
           <div className="group cursor-pointer border px-10 py-5 font-semibold hover:bg-[#111111] hover:text-white md:order-1 md:text-sm md:font-normal">
             Professional Email ₹29.00/mo{" "}
             <HiOutlineArrowNarrowRight className="ml-2 hidden text-2xl transition-all group-hover:inline-block" />
