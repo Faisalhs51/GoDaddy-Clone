@@ -47,64 +47,34 @@ const Footer = () => {
                 showDiv1 ? "" : "hidden"
               } flex flex-col justify-evenly gap-3 py-3 text-sm font-medium text-[#bac0c3] md:mt-2 md:flex md:gap-5 md:text-xs`}
             >
-              <Link
-                href={"#"}
-                className="w-fit hover:border-b hover:border-white"
-              >
+              <Link href={"#"} className="w-fit hover:underline">
                 About Us
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Annual Returns
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Careers
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Contact Us
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Corporate Social Responsibility
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 GoDaddy Blog
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Investor Relations
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Legal
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Newsroom
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Trust Center
               </Link>
             </div>
@@ -128,28 +98,16 @@ const Footer = () => {
                 showDiv2 ? "" : "hidden"
               } flex flex-col justify-evenly gap-3 py-3 text-sm font-medium text-[#bac0c3] md:mt-2 md:flex md:gap-5 md:text-xs`}
             >
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Product Support
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Community
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Report Abuse
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Resources
               </Link>
             </div>
@@ -173,46 +131,25 @@ const Footer = () => {
                 showDiv3 ? "" : "hidden"
               } flex flex-col justify-evenly gap-3 py-3 text-sm font-medium text-[#bac0c3] md:mt-2 md:flex md:gap-5 md:text-xs`}
             >
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Webmail
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 WHOIS
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 ICANN Confirmation
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Designers & Developers
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Product Catalog
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Customer Testimonials
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Business Name Generator
               </Link>
             </div>
@@ -236,22 +173,13 @@ const Footer = () => {
                 showDiv4 ? "" : "hidden"
               } flex flex-col justify-evenly gap-3 py-3 text-sm font-medium text-[#bac0c3] md:mt-2 md:flex md:gap-5 md:text-xs`}
             >
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Affiliates
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Reseller Programs
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 GoDaddy Pro
               </Link>
             </div>
@@ -275,22 +203,13 @@ const Footer = () => {
                 showDiv5 ? "" : "hidden"
               } flex flex-col justify-evenly gap-3 py-3 text-sm font-medium text-[#bac0c3] md:mt-2 md:flex md:gap-5 md:text-xs`}
             >
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 My Products
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Renewals & Billing
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Create Account
               </Link>
             </div>
@@ -314,40 +233,22 @@ const Footer = () => {
                 showDiv6 ? "" : "hidden"
               } flex flex-col justify-evenly gap-3 py-3 text-sm font-medium text-[#bac0c3] md:mt-2 md:flex md:gap-5 md:text-xs`}
             >
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Buy a Domain
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Websites
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 WordPress
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Hosting
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Web Security
               </Link>
-              <Link
-                className="w-fit hover:border-b hover:border-white"
-                href={"#"}
-              >
+              <Link className="w-fit hover:underline" href={"#"}>
                 Email & Office
               </Link>
             </div>
@@ -358,8 +259,9 @@ const Footer = () => {
             <Image
               src={"/Images/godaddy-logo.png"}
               alt="logo"
-              width="40"
-              height="30"
+              // layout="responsive"
+              width={40}
+              height={30}
             />
             <span className="text-2xl font-bold">GoDaddy</span>
           </div>
@@ -394,13 +296,13 @@ const Footer = () => {
         <hr className="my-4 hidden md:block" />
         <div className="mb-3 flex flex-col md:mb-0 md:mt-5 md:flex-row md:items-start md:p-8">
           <div className="flex items-center gap-4 text-xs md:order-2 md:w-[25%] md:justify-end">
-            <Link href={"#"} className="hover:border-b hover:border-white">
+            <Link href={"#"} className="hover:underline">
               Legal
             </Link>
-            <Link href={"#"} className="hover:border-b hover:border-white">
+            <Link href={"#"} className="hover:underline">
               Privacy Policy
             </Link>
-            <Link href={"#"} className="hover:border-b hover:border-white">
+            <Link href={"#"} className="hover:underline">
               Cookies
             </Link>
           </div>
@@ -435,16 +337,16 @@ export default Footer;
 //               <FaPlus className="text-xs text-white" />
 //             </div>
 //             <div className="hidden">
-//               <Link className="w-fit hover:border-b hover:border-white" href={"#"}>About Us</Link>
-//               <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Annual Returns</Link>
-//               <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Careers</Link>
-//               <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Contact Us</Link>
-//               <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Corporate Social Responsibility</Link>
-//               <Link className="w-fit hover:border-b hover:border-white" href={"#"}>GoDaddy Blog</Link>
-//               <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Investor Relations</Link>
-//               <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Legal</Link>
-//               <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Newsroom</Link>
-//               <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Trust Center</Link>
+//               <Link className="w-fit hover:underline" href={"#"}>About Us</Link>
+//               <Link className="w-fit hover:underline" href={"#"}>Annual Returns</Link>
+//               <Link className="w-fit hover:underline" href={"#"}>Careers</Link>
+//               <Link className="w-fit hover:underline" href={"#"}>Contact Us</Link>
+//               <Link className="w-fit hover:underline" href={"#"}>Corporate Social Responsibility</Link>
+//               <Link className="w-fit hover:underline" href={"#"}>GoDaddy Blog</Link>
+//               <Link className="w-fit hover:underline" href={"#"}>Investor Relations</Link>
+//               <Link className="w-fit hover:underline" href={"#"}>Legal</Link>
+//               <Link className="w-fit hover:underline" href={"#"}>Newsroom</Link>
+//               <Link className="w-fit hover:underline" href={"#"}>Trust Center</Link>
 //             </div>
 //           </div>
 //         </div>
@@ -454,10 +356,10 @@ export default Footer;
 //             <FaPlus className="text-xs text-white" />
 //           </div>
 //           <div className="hidden">
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Product Support</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Community</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Report Abuse</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Resources</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Product Support</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Community</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Report Abuse</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Resources</Link>
 //           </div>
 //         </div>
 //         <div>
@@ -466,13 +368,13 @@ export default Footer;
 //             <FaPlus className="text-xs text-white" />
 //           </div>
 //           <div className="hidden">
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Webmail</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>WHOIS</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>ICANN Confirmation</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Designers & Developers</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Product Catalog</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Customer Testimonials</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Business Name Generator</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Webmail</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>WHOIS</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>ICANN Confirmation</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Designers & Developers</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Product Catalog</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Customer Testimonials</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Business Name Generator</Link>
 //           </div>
 //         </div>
 //         <div>
@@ -481,9 +383,9 @@ export default Footer;
 //             <FaPlus className="text-xs text-white" />
 //           </div>
 //           <div className="hidden">
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Affiliates</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Reseller Programs</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>GoDaddy Pro</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Affiliates</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Reseller Programs</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>GoDaddy Pro</Link>
 //           </div>
 //         </div>
 //         <div>
@@ -492,9 +394,9 @@ export default Footer;
 //             <FaPlus className="text-xs text-white" />
 //           </div>
 //           <div className="hidden">
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>My Products</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Renewals & Billing</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Create Account</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>My Products</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Renewals & Billing</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Create Account</Link>
 //           </div>
 //         </div>
 //         <div>
@@ -503,12 +405,12 @@ export default Footer;
 //             <FaPlus className="text-xs text-white" />
 //           </div>
 //           <div className="hidden">
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Buy a Domain</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Websites</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>WordPress</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Hosting</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Web Security</Link>
-//             <Link className="w-fit hover:border-b hover:border-white" href={"#"}>Email & Office</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Buy a Domain</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Websites</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>WordPress</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Hosting</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Web Security</Link>
+//             <Link className="w-fit hover:underline" href={"#"}>Email & Office</Link>
 //           </div>
 //         </div>
 //       </div>
