@@ -47,13 +47,13 @@ const OptionsMenu = () => {
               <IoIosArrowBack className="m-4 text-2xl" />
             </button>
           </div>
-          {MenuItemsImage[menuItem].isItem && (
-            <div className="mt-12 overflow-y-scroll md:p-8">
-              <div>
-                {MenuItems[menuItem].map((item: any, idx: number) => (
-                  <MenuList menu={item} key={idx} />
-                ))}
-              </div>
+          <div className="mt-12 overflow-y-scroll md:p-8">
+            <div>
+              {MenuItems[menuItem].map((item: any, idx: number) => (
+                <MenuList menu={item} key={idx} />
+              ))}
+            </div>
+            {MenuItemsImage[menuItem].isItem && (
               <div className="group flex cursor-pointer flex-col">
                 <Image
                   src={MenuItemsImage[menuItem].thumbnail}
@@ -66,8 +66,8 @@ const OptionsMenu = () => {
                   {MenuItemsImage[menuItem].title}
                 </strong>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </section>
     </>
