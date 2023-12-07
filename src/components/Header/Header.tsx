@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -5,13 +6,33 @@ import { IoCallOutline } from "react-icons/io5";
 import { MdHelpOutline } from "react-icons/md";
 import { GoPerson } from "react-icons/go";
 import { FiShoppingCart } from "react-icons/fi";
+import Menu from "./Menu";
+import OptionsMenu from "./OptionsMenu";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch } from "@/store/store";
 
 const Header = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const menuShow = useSelector((state: any) => state.menu.menuShow);
+  const optionsMenuShow = useSelector(
+    (state: any) => state.menu.optionsMenuShow,
+  );
+
+  const handleMenuShow = () => {
+    dispatch({
+      type: "menu/setMenu",
+      payload: {
+        menuShow: true,
+      },
+    });
+  };
   return (
     <>
+      {menuShow && <Menu />}
+      {optionsMenuShow && <OptionsMenu />}
       <header className=" flex h-14 w-full items-center justify-between gap-4 bg-[#2B2B2B] px-4 py-2 text-white md:px-10 lg:h-16">
         <div className="flex items-center">
-          <button className="lg:hidden">
+          <button className="lg:hidden" onClick={handleMenuShow}>
             <GiHamburgerMenu className="bg-[#2B2B2B] text-xl text-white md:text-2xl" />
           </button>
           <Link href="/" className="flex">
@@ -27,7 +48,7 @@ const Header = () => {
             </span>
           </Link>
         </div>
-        <div className="hidden w-[60%] items-center justify-between text-lg font-bold md:hidden lg:flex">
+        <div className="hidden w-[60%] items-center justify-between text-lg font-bold lg:flex">
           <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
             Domains
           </Link>
