@@ -1,13 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type MenuState = {
-  menuItem: number;
+  menuItem: number | null;
   menuShow: boolean;
   optionsMenuShow: boolean;
 };
 
 const InitialState: MenuState = {
-  menuItem: 0,
+  menuItem: null,
   menuShow: false,
   optionsMenuShow: false,
 };

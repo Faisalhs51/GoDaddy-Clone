@@ -14,6 +14,7 @@ import { AppDispatch } from "@/store/store";
 const Header = () => {
   const dispatch = useDispatch<AppDispatch>();
   const menuShow = useSelector((state: any) => state.menu.menuShow);
+  const menuItem = useSelector((state: any) => state.menu.menuItem);
   const optionsMenuShow = useSelector(
     (state: any) => state.menu.optionsMenuShow,
   );
@@ -26,11 +27,29 @@ const Header = () => {
       },
     });
   };
+
+  const handleMenuItem = (e: any) => {
+    const set = e.target.closest("a");
+    if (!set || set.id === "") return;
+    dispatch({
+      type: "menu/setMenu",
+      payload: {
+        menuItem: menuItem == set.id ? null : set.id,
+        optionsMenuShow: menuItem == set.id ? !optionsMenuShow : true,
+        menuShow: menuItem == set.id ? !menuShow : true,
+      },
+    });
+  };
+
   return (
     <>
       {menuShow && <Menu />}
       {optionsMenuShow && <OptionsMenu />}
-      <header className=" flex h-14 w-full items-center justify-between gap-4 bg-[#2B2B2B] px-4 py-2 text-white md:px-10 lg:h-16">
+      <header
+        className={`flex h-14 w-full items-center justify-between gap-4 bg-[#2B2B2B] px-4 py-2 text-white md:px-10 lg:z-[10] lg:h-16 ${
+          optionsMenuShow ? "lg:absolute" : ""
+        }`}
+      >
         <div className="flex items-center">
           <button className="lg:hidden" onClick={handleMenuShow}>
             <GiHamburgerMenu className="bg-[#2B2B2B] text-xl text-white md:text-2xl" />
@@ -48,17 +67,20 @@ const Header = () => {
             </span>
           </Link>
         </div>
-        <div className="hidden w-[60%] items-center justify-between text-lg font-bold lg:flex">
-          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
+        <div
+          className="hidden w-[60%] items-center justify-between text-lg font-bold lg:flex"
+          onClick={(e) => handleMenuItem(e)}
+        >
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500" id="0">
             Domains
           </Link>
-          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500" id="1">
             Websites and Hosting
           </Link>
-          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500" id="2">
             Security
           </Link>
-          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
+          <Link href="#" className="rounded-lg p-2 hover:bg-gray-500" id="3">
             Email and Marketing
           </Link>
           <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">

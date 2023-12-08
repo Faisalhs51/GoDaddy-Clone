@@ -35,20 +35,20 @@ const OptionsMenu = () => {
           handleCloseMenu(e.target as HTMLElement);
         }}
       >
-        <button className="absolute right-4 top-4 md:left-[36%] md:right-0">
+        <button className="absolute right-4 top-4 md:left-[36%] md:right-0 lg:hidden">
           <IoCloseOutline className="text-3xl text-white" />
         </button>
         <div
           id="optionsMenuSection"
-          className="relative flex h-full w-[85%] flex-col bg-[#f5f5f5] p-4 md:w-[35%]"
+          className="relative flex h-full w-[85%] flex-col bg-[#f5f5f5] p-4 md:w-[35%] lg:h-fit lg:w-full lg:bg-white"
         >
-          <div className="absolute left-0 top-0 z-[5] w-full bg-[#f5f5f5]">
+          <div className="absolute left-0 top-0 z-[5] w-full bg-[#f5f5f5] lg:hidden">
             <button onClick={handleBackBtn}>
               <IoIosArrowBack className="m-4 text-2xl" />
             </button>
           </div>
-          <div className="mt-12 overflow-y-scroll md:p-8">
-            <div>
+          <div className="mt-12 flex flex-col overflow-y-scroll md:p-8 lg:h-fit lg:flex-row lg:justify-between lg:overflow-y-visible">
+            <div className="block gap-6 lg:flex">
               {MenuItems[menuItem].map((item: any, idx: number) => (
                 <MenuList menu={item} key={idx} />
               ))}
@@ -62,7 +62,7 @@ const OptionsMenu = () => {
                   height={275}
                   className="rounded-sm transition-all duration-500 group-hover:scale-105"
                 />
-                <strong className="my-5 text-lg font-black capitalize group-hover:underline md:text-base md:font-semibold">
+                <strong className="my-5 text-lg font-black capitalize group-hover:underline md:text-base md:font-semibold lg:w-[281px] lg:text-xl lg:font-medium">
                   {MenuItemsImage[menuItem].title}
                 </strong>
               </div>
@@ -77,21 +77,25 @@ const OptionsMenu = () => {
 const MenuList = ({ menu }: any) => {
   return (
     <>
-      <div>
+      <div className="lg:h-fit">
         <p className="text-sm font-black uppercase tracking-wider text-[#767676] md:text-xs md:font-medium">
           {menu.title}
         </p>
-        <div className="my-7 flex flex-col gap-7">
+        <div
+          className={`my-7 flex flex-col flex-wrap gap-3 lg:my-0 ${
+            menu.title === "Domain names" ? "lg:h-[40vh]" : "lg:h-fit"
+          }`}
+        >
           {menu.list.map((item: string, idx: number) => (
             <MenuItem item={item} key={idx} />
           ))}
         </div>
         {menu.extra && (
-          <div className="mb-8 flex items-center gap-3">
-            <div className="flex items-center rounded-xl bg-white p-2 text-2xl">
+          <div className="group mb-8 flex cursor-pointer items-center gap-3 px-2 py-4 hover:bg-white lg:mb-0 lg:py-2 lg:hover:bg-[#f5f5f5]">
+            <div className="flex items-center rounded-xl bg-white p-2 text-2xl group-hover:bg-[#f5f5f5] lg:bg-[#f5f5f5] lg:group-hover:bg-white">
               <HiOutlineArrowNarrowRight />
             </div>
-            <p className="text-lg font-black text-[#444444] md:text-sm md:font-bold">
+            <p className="text-lg font-black text-[#444444] hover:text-[#1976d2] md:text-sm md:font-bold">
               {menu.extra}
             </p>
           </div>
@@ -104,11 +108,11 @@ const MenuList = ({ menu }: any) => {
 const MenuItem = ({ item }: MenuItemType) => {
   return (
     <>
-      <div className="flex items-center gap-3">
+      <div className="flex cursor-pointer items-center gap-3 rounded-md px-2 py-4 hover:bg-white lg:w-max lg:py-2 lg:hover:bg-[#f5f5f5]">
         <div className="flex items-center rounded-xl bg-[#dbefef] p-2 text-2xl">
           <IoIosSearch />
         </div>
-        <p className="text-lg font-black text-[#444444] md:text-sm md:font-bold">
+        <p className="text-lg font-black text-[#444444] hover:text-[#1976d2] md:text-sm md:font-bold">
           {item}
         </p>
       </div>

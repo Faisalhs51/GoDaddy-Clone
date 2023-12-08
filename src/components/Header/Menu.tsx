@@ -45,7 +45,7 @@ const Menu = () => {
   return (
     <>
       <section
-        className={`absolute z-[5] h-full w-full ${
+        className={`absolute z-[5] h-full w-full lg:hidden duration-500 transition-all ${
           optionsMenuShow
             ? "bg-transparent backdrop-blur-0"
             : "bg-[rgba(0,0,0,0.5)] backdrop-blur-sm"
