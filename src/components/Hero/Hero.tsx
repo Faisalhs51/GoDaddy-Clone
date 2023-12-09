@@ -1,16 +1,23 @@
+"use client";
 import { IoIosSearch } from "react-icons/io";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 const Hero = () => {
+  const optionsMenuShow = useSelector(
+    (state: any) => state.menu.optionsMenuShow,
+  );
   return (
-    <section className="flex w-full flex-col">
+    <section
+      className={`flex w-full flex-col ${optionsMenuShow ? "lg:pt-16" : ""}`}
+    >
       <div className="flex w-full p-4 md:px-8 lg:px-14">
         <input
           type="text"
           placeholder="Find your perfect domain"
-          className="w-[85%] border border-r-0 border-black bg-[#e8eaeb] p-3 pl-10 md:pr-7 lg:h-16 lg:w-[45%] lg:text-lg"
+          className="w-[85%] border border-r-0 border-black bg-[#e8eaeb] p-3 pl-10 focus:border-4 focus:!border-blue-400 md:pr-7 lg:h-16 lg:w-[45%] lg:text-lg"
         />
         <button className="border border-l-0 border-black bg-[#09757a] p-4 hover:bg-[#004249] md:p-2 lg:w-[15%]">
           <IoIosSearch className="text-2xl text-white md:hidden" />

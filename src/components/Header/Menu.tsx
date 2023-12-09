@@ -9,6 +9,7 @@ import { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "@/store/store";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Menu = () => {
   const body = useRef(document.body);
@@ -17,6 +18,7 @@ const Menu = () => {
     body.current.style.overflowY = "hidden";
 
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       body.current.style.overflowY = "auto";
     };
   }, []);
@@ -44,8 +46,10 @@ const Menu = () => {
 
   return (
     <>
-      <section
-        className={`absolute z-[5] h-full w-full lg:hidden duration-500 transition-all ${
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className={`absolute z-[5] h-full w-full transition-all duration-500 lg:hidden ${
           optionsMenuShow
             ? "bg-transparent backdrop-blur-0"
             : "bg-[rgba(0,0,0,0.5)] backdrop-blur-sm"
@@ -54,12 +58,18 @@ const Menu = () => {
           handleCloseMenu(e.target as HTMLElement);
         }}
       >
-        <button className="absolute right-4 top-4 md:left-[36%] md:right-0">
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="absolute right-4 top-4 md:left-[36%] md:right-0"
+        >
           <IoCloseOutline className="text-3xl text-white" />
-        </button>
-        <div
+        </motion.button>
+        <motion.div
+          initial={{ translateX: "-100%", opacity: 0 }}
+          animate={{ translateX: "0%", opacity: 1 }}
           id="menuSection"
-          className="flex h-full w-[85%] flex-col bg-white p-4 duration-500 md:w-[35%]"
+          className="flex h-full w-[85%] flex-col bg-white p-4 duration-150 md:w-[35%]"
         >
           <Image
             src={"Images/Svgs/logo.svg"}
@@ -126,8 +136,8 @@ const Menu = () => {
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </>
   );
 };
