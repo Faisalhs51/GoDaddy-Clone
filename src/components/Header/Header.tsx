@@ -87,16 +87,36 @@ const Header = () => {
           className="hidden w-[60%] items-center justify-between text-lg font-bold lg:flex"
           onClick={(e) => handleMenuItem(e)}
         >
-          <button className="rounded-lg p-2 hover:bg-gray-500" id="0">
+          <button
+            className={`rounded-lg p-2 hover:bg-gray-500 ${
+              menuItem === 0 ? "bg-white text-black hover:bg-white" : ""
+            }`}
+            id="0"
+          >
             Domains
           </button>
-          <button className="rounded-lg p-2 hover:bg-gray-500" id="1">
+          <button
+            className={`rounded-lg p-2 hover:bg-gray-500 ${
+              menuItem === 1 ? "bg-white text-black hover:bg-white" : ""
+            }`}
+            id="1"
+          >
             Websites and Hosting
           </button>
-          <button className="rounded-lg p-2 hover:bg-gray-500" id="2">
+          <button
+            className={`rounded-lg p-2 hover:bg-gray-500 ${
+              menuItem === 2 ? "bg-white text-black hover:bg-white" : ""
+            }`}
+            id="2"
+          >
             Security
           </button>
-          <button className="rounded-lg p-2 hover:bg-gray-500" id="3">
+          <button
+            className={`rounded-lg p-2 hover:bg-gray-500 ${
+              menuItem === 3 ? "bg-white text-black hover:bg-white" : ""
+            }`}
+            id="3"
+          >
             Email and Marketing
           </button>
           <Link href="#" className="rounded-lg p-2 hover:bg-gray-500">
