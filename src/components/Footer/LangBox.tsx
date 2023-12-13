@@ -1,14 +1,24 @@
+import { AppDispatch } from "@/store/store";
 import { IoCloseOutline } from "react-icons/io5";
+import { useDispatch } from "react-redux";
 
 const LangBox = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const handleLangMenuClose = () => {
+    dispatch({
+      type: "footerMenu/setLangMenu",
+      payload: { langMenuShow: false },
+    });
+  };
+
   return (
     <div
-      className={`z-2 t-0 r-0 absolute h-fit w-full bg-[#e8eaeb] px-20 py-8 text-black md:h-[65%] 
+      className={`z-2 t-0 r-0 absolute h-fit w-full bg-[#e8eaeb] px-4 py-8 text-black md:h-[65%] lg:px-20 
       `}
     >
-      {/* <button onClick={showFunc(false)}>
+      <button onClick={handleLangMenuClose} className="block md:hidden">
         <IoCloseOutline className="absolute right-4 top-4 cursor-pointer text-xl" />
-      </button> */}
+      </button>
       <h3 className="text-3xl font-medium">Choose your Country/Region</h3>
       <div className="flex h-full w-full flex-col justify-evenly gap-10 text-base md:flex-row">
         <ul className="flex h-full flex-col justify-evenly">

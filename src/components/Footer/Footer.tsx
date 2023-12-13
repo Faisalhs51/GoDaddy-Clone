@@ -12,6 +12,8 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import LangBox from "./LangBox";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch } from "@/store/store";
 
 const Footer = () => {
   const [showDiv1, setShowDiv1] = useState(false);
@@ -21,11 +23,21 @@ const Footer = () => {
   const [showDiv5, setShowDiv5] = useState(false);
   const [showDiv6, setShowDiv6] = useState(false);
 
-  const [showlang, setShowlang] = useState(false);
+  const langMenuShow = useSelector(
+    (state: any) => state.footerMenu.langMenuShow,
+  );
+
+  const dispatch = useDispatch<AppDispatch>();
+  const handleLangMenuShow = () => {
+    dispatch({
+      type: "footerMenu/setLangMenu",
+      payload: { langMenuShow: !langMenuShow },
+    });
+  };
 
   return (
     <footer className="relative w-full">
-      {/* <LangBox /> */}
+      {langMenuShow && <LangBox />}
       <div className="h-fit bg-[#111111] p-4 text-white">
         <div className="flex flex-col gap-4 md:mt-7 md:w-full md:flex-row md:justify-between md:px-8">
           <div>
@@ -267,11 +279,7 @@ const Footer = () => {
           </div>
           <hr className="my-4 md:hidden" />
           <div className="flex w-full justify-evenly md:w-[25%] md:gap-6">
-            <button
-              onClick={() => {
-                setShowlang(!showlang);
-              }}
-            >
+            <button onClick={handleLangMenuShow}>
               <span className="font-semibold">India - English</span>{" "}
               <IoIosArrowUp className="inline-block text-xl" />
             </button>
@@ -327,95 +335,3 @@ const Footer = () => {
 };
 
 export default Footer;
-//   return (
-//     <footer>
-//       <div className="h-[120vh] bg-[#111111] p-4 text-white">
-//         <div className="flex flex-col ">
-//           <div>
-//             <div className="flex w-full items-center justify-between">
-//               <h4 className="text-lg font-bold">About GoDaddy</h4>
-//               <FaPlus className="text-xs text-white" />
-//             </div>
-//             <div className="hidden">
-//               <Link className="w-fit hover:underline" href={"#"}>About Us</Link>
-//               <Link className="w-fit hover:underline" href={"#"}>Annual Returns</Link>
-//               <Link className="w-fit hover:underline" href={"#"}>Careers</Link>
-//               <Link className="w-fit hover:underline" href={"#"}>Contact Us</Link>
-//               <Link className="w-fit hover:underline" href={"#"}>Corporate Social Responsibility</Link>
-//               <Link className="w-fit hover:underline" href={"#"}>GoDaddy Blog</Link>
-//               <Link className="w-fit hover:underline" href={"#"}>Investor Relations</Link>
-//               <Link className="w-fit hover:underline" href={"#"}>Legal</Link>
-//               <Link className="w-fit hover:underline" href={"#"}>Newsroom</Link>
-//               <Link className="w-fit hover:underline" href={"#"}>Trust Center</Link>
-//             </div>
-//           </div>
-//         </div>
-//         <div>
-//           <div className="flex w-full items-center justify-between">
-//             <h4 className="text-lg font-bold">Support</h4>
-//             <FaPlus className="text-xs text-white" />
-//           </div>
-//           <div className="hidden">
-//             <Link className="w-fit hover:underline" href={"#"}>Product Support</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Community</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Report Abuse</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Resources</Link>
-//           </div>
-//         </div>
-//         <div>
-//           <div className="flex w-full items-center justify-between">
-//             <h4 className="text-lg font-bold">Resources</h4>
-//             <FaPlus className="text-xs text-white" />
-//           </div>
-//           <div className="hidden">
-//             <Link className="w-fit hover:underline" href={"#"}>Webmail</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>WHOIS</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>ICANN Confirmation</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Designers & Developers</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Product Catalog</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Customer Testimonials</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Business Name Generator</Link>
-//           </div>
-//         </div>
-//         <div>
-//           <div className="flex w-full items-center justify-between">
-//             <h4 className="text-lg font-bold">Partner Programs</h4>
-//             <FaPlus className="text-xs text-white" />
-//           </div>
-//           <div className="hidden">
-//             <Link className="w-fit hover:underline" href={"#"}>Affiliates</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Reseller Programs</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>GoDaddy Pro</Link>
-//           </div>
-//         </div>
-//         <div>
-//           <div className="flex w-full items-center justify-between">
-//             <h4 className="text-lg font-bold">Account</h4>
-//             <FaPlus className="text-xs text-white" />
-//           </div>
-//           <div className="hidden">
-//             <Link className="w-fit hover:underline" href={"#"}>My Products</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Renewals & Billing</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Create Account</Link>
-//           </div>
-//         </div>
-//         <div>
-//           <div className="flex w-full items-center justify-between">
-//             <h4 className="text-lg font-bold">Shopping</h4>
-//             <FaPlus className="text-xs text-white" />
-//           </div>
-//           <div className="hidden">
-//             <Link className="w-fit hover:underline" href={"#"}>Buy a Domain</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Websites</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>WordPress</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Hosting</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Web Security</Link>
-//             <Link className="w-fit hover:underline" href={"#"}>Email & Office</Link>
-//           </div>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
